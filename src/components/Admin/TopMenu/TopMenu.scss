@@ -1,9 +1,34 @@
+@font-face {
+    font-family: 'Harlow-Solid';
+    src: url('../../../assets/Fonts/Harlow-Solid-Italic_22105.ttf');
+}
+
 .top-menu-admin{
     &__logo{ 
         width:  250px;
-        background-color: orange !important;
+        background-color: white !important;
+        padding-top: 10px !important;
+        padding-bottom: 0px !important;
+        &__name{
+            position: absolute;
+            margin-left: 50px;
+            margin-top: 10px;
+            font-size: 30px;
+            font-family: 'Harlow-Solid';
+        }
+        &__image{
+            position: relative;
+            top:40px;
+        }
     }
     i.icon{
         margin: 0 !important;
+    }
+    div.right.menu{
+        background-color: red;
+    }
+
+    .user-name, .sign-out{
+        color: white !important;
     }
 }

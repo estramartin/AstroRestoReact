@@ -3,6 +3,7 @@
         .ui.image{
             width: 100px;
             height: 70px;
+            object-fit: cover;
         }
         &.status{
             .icon{

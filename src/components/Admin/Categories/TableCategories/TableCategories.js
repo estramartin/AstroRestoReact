@@ -18,7 +18,7 @@ export const TableCategories = (props) => {
         {map(categories, (category, index) => (
           <Table.Row key={index}>
             <Table.Cell width={2}>
-              <Image src={category.image} />
+              <Image className="rounded-start" src={category.image} />
             </Table.Cell>
             <Table.Cell>{category.title}</Table.Cell>
 

@@ -1,6 +1,7 @@
 import React from "react";
-import { Icon, Menu } from "semantic-ui-react";
+import { Icon, Menu, Image } from "semantic-ui-react";
 import { useAuth } from "../../../hooks";
+import logo from "../../../assets/AstroRestoLogoSolo.png";
 import "./TopMenu.scss";
 
 export function TopMenu() {
@@ -16,10 +17,14 @@ export function TopMenu() {
     <div>
       <Menu fixed="top" className="top-menu-admin">
         <Menu.Item className="top-menu-admin__logo">
-          <p>RestoNauta Admin</p>
+          <Image className="top-menu-admin__logo__img" src={logo} size="tiny" />
+          <p className="top-menu-admin__logo__name">AstroRestó</p>
         </Menu.Item>
         <Menu.Menu position="right">
-          <Menu.Item>Hola, {renderName()}</Menu.Item>
+          <Menu.Item>
+            {" "}
+            <p className="user-name">Hola, {renderName()}</p>
+          </Menu.Item>
           <Menu.Item onClick={logout}>
             <Icon name="sign-out"></Icon>
           </Menu.Item>

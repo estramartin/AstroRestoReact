@@ -1,23 +1,35 @@
+$small: 300px;
+$medium: 900px;
+
 .side-menu-admin{
+    
     .ui.menu{
         width: 250px !important;
         overflow: hidden;
-        padding-top: 4em;
+        padding-top: 5em;
         z-index: 99 !important;
-
+        
         i.icon{
             float:initial !important;
             margin: 0 !important;
             margin-right: 10px !important;
+            
         }
-    }
 
+        a.active{
+            background-color: red!important;
+            color: white;
+        }
+       
+    }
+  
     .content{
-        margin-top: 50px;
+        margin-top: 70px;
         position: absolute;
         right: 0;
         padding: 20px;
-        width: calc(100% - 250px);
-    }
+        width: calc(100% - 250px);        
+    }  
 
 }
+

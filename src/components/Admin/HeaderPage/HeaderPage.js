@@ -9,7 +9,7 @@ export const HeaderPage = (props) => {
 
       <div>
         {btnTitle && (
-          <Button positive onClick={btnClick}>
+          <Button negative onClick={btnClick}>
             {btnTitle}
           </Button>
         )}
