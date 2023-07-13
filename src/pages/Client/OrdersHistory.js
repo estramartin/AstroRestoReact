@@ -59,6 +59,9 @@ export const OrderHistory = () => {
   return (
     <div>
       <h1>Historial de pedidos</h1>
+      {map(orders, (order) => (
+        <OrderHistoryItems key={order.ord_id} order={order} />
+      ))}
       {loading ? (
         <Loader>Cargando...</Loader>
       ) : (
@@ -76,9 +79,6 @@ export const OrderHistory = () => {
                 : "Pedir Cuenta"}
             </Button>
           )}
-          {map(orders, (order) => (
-            <OrderHistoryItems key={order.ord_id} order={order} />
-          ))}
         </>
       )}
 

@@ -36,6 +36,7 @@ export const addProductApi = async (product, token) => {
     formData.append("image", product.image);
     formData.append("active", product.active);
     formData.append("category", product.category);
+    console.log(formData)
     const url = `${BASE_API}/${route}/`;
     const params = {
       method: "POST",

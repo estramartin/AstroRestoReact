@@ -29,11 +29,11 @@ export function LoginForm(){
     return(
        <Form className='login-form-admin' onSubmit={formik.handleSubmit}>
         <Form.Input 
-        name = "email" 
-        placeholder="Correro Electronico" 
-        value={formik.values.email}
+        name = "username" 
+        placeholder="usuario" 
+        value={formik.values.username}
         onChange={formik.handleChange}
-        error={formik.errors.email}
+        error={formik.errors.username}
         />
         <Form.Input 
         name="password" 
@@ -50,14 +50,14 @@ export function LoginForm(){
 
 function initialValues(){
     return{
-        email:"",
+        username:"",
         password:"",
     }
 }
 
 function validationSchema(){
     return{
-        email: Yup.string().email(true).required(true),
+        username: Yup.string().required(true),
         password: Yup.string().required(true),
     }
 }

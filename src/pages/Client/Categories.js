@@ -12,7 +12,7 @@ export const Categories = () => {
   }, []);
   return (
     <div>
-      <h3>Categorieas</h3>
+      <h1>Categorieas</h1>
       {loading ? (
         <Loader>Cargando...</Loader>
       ) : (

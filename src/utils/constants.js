@@ -1,4 +1,5 @@
 export const BASE_API = "http://127.0.0.1:8000";
+export const BASE_WS = `ws://localhost:8080/ws/notifications/`
 export const TOKEN = "token";
 export const ORDER_STATUS = {
   PENDING: "PENDING",

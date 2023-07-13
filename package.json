@@ -22,6 +22,7 @@
     "semantic-ui-css": "^2.5.0",
     "semantic-ui-react": "^2.1.4",
     "web-vitals": "^2.1.4",
+    "websocket": "^1.0.34",
     "yup": "^1.0.0"
   },
   "scripts": {

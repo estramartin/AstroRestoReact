@@ -2,6 +2,7 @@ import React from "react";
 import { Icon, Menu, Image } from "semantic-ui-react";
 import { useAuth } from "../../../hooks";
 import logo from "../../../assets/AstroRestoLogoSolo.png";
+import NotificationComponent from '../../Common/Channel/NotificationComponent';
 import "./TopMenu.scss";
 
 export function TopMenu() {

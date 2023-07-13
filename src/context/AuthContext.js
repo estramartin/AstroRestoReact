@@ -22,7 +22,7 @@ export function AuthProvider(props){
 
     const logout = () =>{
         if(auth){
-            setAuth(null)
+            setAuth(undefined)
             removeToken()
         }
     };
@@ -47,7 +47,8 @@ export function AuthProvider(props){
         logout,
     }
     
-    if(auth === undefined) return null
+    console.log(valueContext.auth)
+    //if(valueContext.auth === undefined) return null
 
     return(
         <AuthContext.Provider value={valueContext}>

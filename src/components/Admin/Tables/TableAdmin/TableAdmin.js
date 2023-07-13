@@ -5,7 +5,8 @@ import classNames from "classnames";
 import { Link } from "react-router-dom";
 import { getOrdersByTableApi } from "../../../../api/orders";
 import { ORDER_STATUS } from "../../../../utils/constants";
-import { ReactComponent as IcTable } from "../../../../assets/table.svg";
+import { ReactComponent as IcTableEmpty } from "../../../../assets/table.svg";
+import { ReactComponent as IcTableFull } from "../../../../assets/table1.svg";
 import { usePayment } from "../../../../hooks";
 import "./TableAdmin.scss";
 
@@ -54,14 +55,25 @@ export const TableAdmin = (props) => {
       ) : null}
       {pendingPayment && <Label circular color="orange" content="Cuenta" />}
 
-      <IcTable
+      {size(orders) > 0 || tableBusy ? (
+         <IcTableFull
+         className={classNames({
+           pending: size(orders) > 0,
+           busy: tableBusy,
+           "pending-payment": pendingPayment,
+         })}
+       />
+      ) :
+
+      <IcTableEmpty
         className={classNames({
           pending: size(orders) > 0,
           busy: tableBusy,
           "pending-payment": pendingPayment,
         })}
       />
-      <p>Mesa:{table.number}</p>
+      }
+      <p className="label">{table.number}</p>
     </Link>
   );
 };

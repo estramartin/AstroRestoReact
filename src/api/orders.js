@@ -1,4 +1,5 @@
-import { BASE_API, ORDER_STATUS } from "../utils/constants";
+import { BASE_API, ORDER_STATUS, BASE_WS } from "../utils/constants";
+import { w3cwebsocket } from 'websocket';
 const route = "api/pedidos";
 
 export const getOrdersByTableApi = async (
@@ -86,6 +87,11 @@ export const deleteOrdersApi = async (id) => {
 
 export const addOrderToTableApi = async (idTable, idProduct) => {
   try {
+    const client = new w3cwebsocket(BASE_WS);
+    client.onopen = () => {
+      client.send(idTable)
+    }
+    
     const url = `${BASE_API}/${route}/`;
     const params = {
       method: "POST",

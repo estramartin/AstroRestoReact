@@ -27,15 +27,24 @@ export function ClientLayout(props) {
   const goToCart = () => {
     navigate(`/client/${tableNumber}/cart`);
   };
+
+  const goToCategories = () => {
+    navigate(`/client/${tableNumber}`);
+  };
+
   return (
     <div className="client-layout-bg">
       <Container className="client-layout">
         <div className="client-layout__header">
-          <Link to={`/client/${tableNumber}`}>
+          {/* <Link to={`/client/${tableNumber}`}>
             <h1>RestoNauta</h1>
-          </Link>
+          </Link> */}
+          
           <span>Mesa {tableNumber}</span>
           <div>
+          <Button icon onClick={goToCategories}>
+              <Icon name="shopping basket" />
+            </Button>
             <Button icon onClick={goToCart}>
               <Icon name="shop" />
             </Button>
